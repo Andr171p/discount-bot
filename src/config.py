@@ -13,11 +13,15 @@ load_dotenv(dotenv_path=ENV_PATH)
 
 
 class DBConfig(BaseSettings):
-    ...
+    url: str = f"sqlite+aiosqlite:///{BASE_DIR}/src/database/data/users.db"
+
+
+class StaticConfig(BaseSettings):
+    messages: 
 
 
 class TelegramConfig(BaseSettings):
-    token: str = os.getenv("TELEGRAM_TOKEN")
+    token: str = os.getenv("BOT_TOKEN")
 
 
 class APIConfig(BaseSettings):
@@ -33,6 +37,7 @@ class APIConfig(BaseSettings):
 class Config(BaseSettings):
     telegram: TelegramConfig = TelegramConfig()
     api: APIConfig = APIConfig()
+    db: DBConfig = DBConfig()
 
 
 config = Config()
