@@ -4,6 +4,7 @@ from aiogram.filters import Command
 
 from src.config import config
 from src.utils import load_json
+from src.app.keyboards.start import start_kb
 
 
 start_router = Router()
@@ -15,5 +16,6 @@ async def start(message: Message) -> None:
     username: str = message.from_user.username
     text = await load_json(path=config.messages.greeting)
     await message.answer(
-        text=text['start'].format(username=username)
+        text=text['start'].format(username=username),
+        reply_markup=await start_kb()
     )

@@ -15,12 +15,29 @@ class UserService(DBSession):
             await connection.run_sync(UserModel.metadata.drop_all)
             await connection.run_sync(UserModel.metadata.create_all)
 
-    async def add_user(self, user: UserModel) -> UserModel:
+    async def add_user(self, user: UserModel) -> UserModel | None:
         async with self.session() as session:
             session.add(user)
             await session.commit()
             await session.refresh(user)
         return user
+
+    async def update_user(self, user: UserModel) -> UserModel | None:
+        async with self.session() as session:
+            await session.merge(user)
+            await session.commit()
+            await session.refresh(user)
+        return user
+
+    async def delete_user(self, user_id: int) -> UserModel:
+        async with self.session() as session:
+            user = await session.execute(
+                select(UserModel).where(UserModel.user_id == user_id)
+            )
+            if user:
+                await session.delete(user)
+                await session.commit()
+            return user.scalars().one()
 
     async def get_user(self, user_id: int) -> UserModel | None:
         async with self.session() as session:
@@ -35,3 +52,6 @@ class UserService(DBSession):
                 select(UserModel)
             )
             return users.scalars().all()
+
+
+user_service = UserService()

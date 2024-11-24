@@ -1,8 +1,13 @@
 import re
+import time
 import json
 import aiofiles
 from typing import Dict
 from pathlib import Path
+
+
+def timestamp() -> int:
+    return int(time.time())
 
 
 async def load_json(path: Path | str) -> Dict[str, str]:
@@ -26,3 +31,11 @@ def format_phone(phone: str) -> str:
     elif len(digits) == 10 and digits.startswith('9'):
         digits = '7' + digits
     return f"+{digits[0]}({digits[1:4]}){digits[4:7]}-{digits[7:9]}-{digits[9:11]}"
+
+
+def validate_phone(phone: str) -> bool:
+    pattern = r'\+\d\(\d{3}\)\d{3}-\d{2}-\d{2}'
+    return bool(re.fullmatch(
+        pattern=pattern,
+        string=phone
+    ))

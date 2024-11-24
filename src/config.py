@@ -16,6 +16,13 @@ class DBConfig(BaseSettings):
     url: str = f"sqlite+aiosqlite:///{BASE_DIR}/src/database/data/users.db"
 
 
+class StorageConfig(BaseSettings):
+    host: str = "localhost"
+    port: int = 6379
+    db: int = 0
+    expire_timeout: int = 86400
+
+
 class MessagesConfig(BaseSettings):
     greeting: Path = BASE_DIR / "src" / "static" / "messages" / "start.json"
     auth: Path = BASE_DIR / "src" / "static" / "messages" / "auth.json"
@@ -39,6 +46,7 @@ class Config(BaseSettings):
     telegram: TelegramConfig = TelegramConfig()
     api: APIConfig = APIConfig()
     db: DBConfig = DBConfig()
+    storage: StorageConfig = StorageConfig()
     messages: MessagesConfig = MessagesConfig()
 
 

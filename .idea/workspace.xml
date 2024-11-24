@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="orders-status-app 1.0.0">
-      <change afterPath="$PROJECT_DIR$/src/app/states/contact.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/statics/messages/auth.json" afterDir="false" />
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 1.0.1">
+      <change afterPath="$PROJECT_DIR$/src/app/keyboards/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/keyboards/status.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/schemas/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/order_service/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/services/service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/services/session.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/greetings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/start.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/states/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/states/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/auth.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/auth.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/services/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/services/service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/keyboards/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/order_service/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +50,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.api (1).executor": "Run",
     "Python.api.executor": "Run",
+    "Python.auth.executor": "Run",
     "Python.base.executor": "Run",
     "Python.config.executor": "Run",
     "Python.service.executor": "Run",
+    "Python.storage.executor": "Run",
     "Python.utils.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -52,11 +65,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusApp\src" />
+      <recent name="C:\Users\andre\OrderStatusApp\src\status_api" />
       <recent name="C:\Users\andre\OrderStatusApp\src\database\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.utils">
-    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.storage">
+    <configuration name="api (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -65,11 +80,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/http" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/order_service" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/http/api.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/order_service/api.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -78,7 +93,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="auth" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,33 +102,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database/models" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/routers" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/models/base.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusApp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/config.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/routers/auth.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -136,6 +129,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/services/service.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="storage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/orders_storage/service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/orders_storage/service/storage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.storage" />
+        <item itemvalue="Python.api (1)" />
         <item itemvalue="Python.utils" />
+        <item itemvalue="Python.auth" />
         <item itemvalue="Python.service" />
-        <item itemvalue="Python.base" />
-        <item itemvalue="Python.api" />
-        <item itemvalue="Python.config" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732403331177</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[orders-status-app] 1.0.1">
+      <option name="closed" value="true" />
+      <created>1732443393710</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732443393710</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +257,7 @@
     <MESSAGE value="orders-status-app" />
     <MESSAGE value="orders-status-app 1.0" />
     <MESSAGE value="orders-status-app 1.0.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="orders-status-app 1.0.0" />
+    <MESSAGE value="[orders-status-app] 1.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 1.0.1" />
   </component>
 </project>

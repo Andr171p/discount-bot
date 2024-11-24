@@ -24,7 +24,7 @@ class OrderServiceAPI:
     ) -> Dict:
         data: Dict[str, Any] = {
             "command": config.api.order,
-            "phone": phone
+            "telefon": phone
         }
         async with aiohttp.ClientSession() as session:
             async with session.post(
@@ -59,3 +59,13 @@ class OrderServiceAPI:
 
     async def get_orders_history(self, phone: str) -> Dict:
         pass
+
+
+import asyncio
+
+print(asyncio.run(OrderServiceAPI().get_orders()))
+from src.utils import format_phone
+phone = format_phone("9526725393")
+print(phone)
+print(asyncio.run(OrderServiceAPI().get_order(phone=phone)))
+print(asyncio.run(OrderServiceAPI().get_order(phone="89526725393")))
