@@ -1,3 +1,4 @@
+import re
 import json
 import aiofiles
 from typing import Dict
@@ -12,3 +13,16 @@ async def load_json(path: Path | str) -> Dict[str, str]:
     ) as file:
         data = await file.read()
         return json.loads(data)
+
+
+def format_phone(phone: str) -> str:
+    digits = re.sub(
+        pattern='\D',
+        repl='',
+        string=phone
+    )
+    if len(digits) == 11 and digits.startswith('8'):
+        digits = '7' + digits[1:]
+    elif len(digits) == 10 and digits.startswith('9'):
+        digits = '7' + digits
+    return f"+{digits[0]}({digits[1:4]}){digits[4:7]}-{digits[7:9]}-{digits[9:11]}"

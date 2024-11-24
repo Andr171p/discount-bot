@@ -16,8 +16,9 @@ class DBConfig(BaseSettings):
     url: str = f"sqlite+aiosqlite:///{BASE_DIR}/src/database/data/users.db"
 
 
-class StaticConfig(BaseSettings):
-    messages: 
+class MessagesConfig(BaseSettings):
+    greeting: Path = BASE_DIR / "src" / "static" / "messages" / "start.json"
+    auth: Path = BASE_DIR / "src" / "static" / "messages" / "auth.json"
 
 
 class TelegramConfig(BaseSettings):
@@ -38,6 +39,7 @@ class Config(BaseSettings):
     telegram: TelegramConfig = TelegramConfig()
     api: APIConfig = APIConfig()
     db: DBConfig = DBConfig()
+    messages: MessagesConfig = MessagesConfig()
 
 
 config = Config()
