@@ -16,7 +16,7 @@ class DBConfig(BaseSettings):
     url: str = f"sqlite+aiosqlite:///{BASE_DIR}/src/database/data/users.db"
 
 
-class StorageConfig(BaseSettings):
+class RedisConfig(BaseSettings):
     host: str = "localhost"
     port: int = 6379
     db: int = 0
@@ -46,7 +46,7 @@ class Config(BaseSettings):
     telegram: TelegramConfig = TelegramConfig()
     api: APIConfig = APIConfig()
     db: DBConfig = DBConfig()
-    storage: StorageConfig = StorageConfig()
+    redis: RedisConfig = RedisConfig()
     messages: MessagesConfig = MessagesConfig()
 
 

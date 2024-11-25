@@ -2,7 +2,7 @@ from typing import Dict
 
 from src.config import config
 from src.utils import timestamp
-from src.redis.connection import RedisConnection
+from src.redis.service import RedisConnection
 
 
 class RedisManager(RedisConnection):

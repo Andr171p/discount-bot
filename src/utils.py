@@ -1,13 +1,8 @@
 import re
-import time
 import json
 import aiofiles
 from typing import Dict
 from pathlib import Path
-
-
-def timestamp() -> int:
-    return int(time.time())
 
 
 async def load_json(path: Path | str) -> Dict[str, str]:
