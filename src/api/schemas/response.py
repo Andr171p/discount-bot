@@ -2,7 +2,7 @@ from typing import List
 from pydantic import BaseModel
 
 
-class OrderSchema(BaseModel):
+class OrderResponseSchema(BaseModel):
     client: str
     number: str
     date: str
@@ -22,5 +22,5 @@ class OrderSchema(BaseModel):
     phones: List[str]
 
 
-class OrdersSchema(BaseModel):
-    orders: List[OrderSchema]
+class OrdersResponseSchema(BaseModel):
+    orders: List[OrderResponseSchema]

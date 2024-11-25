@@ -2,7 +2,8 @@ import aiohttp
 from typing import Any, Dict
 
 from src.config import config
-from src.api.schemas.order import OrderSchema, OrdersSchema
+from src.api.schemas.request import OrderRequestSchema, OrdersRequestSchema
+from src.api.schemas.response import OrderResponseSchema, OrdersResponseSchema
 
 
 class OrderServiceAPI:
@@ -22,11 +23,8 @@ class OrderServiceAPI:
             self,
             phone: str,
             timeout: int = 10
-    ) -> OrderSchema:
-        data: Dict[str, Any] = {
-            "command": config.api.order,
-            "telefon": phone
-        }
+    ) -> OrderResponseSchema:
+        data: Dict[str, Any] = OrderRequestSchema(telefon=phone).model_dump()
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 url=self.url,
@@ -36,16 +34,13 @@ class OrderServiceAPI:
             ) as response:
                 if self.is_ok(response=response):
                     order = await response.json()
-                    return OrderSchema(**order['data']['order'])
+                    return OrderResponseSchema(**order['data']['order'])
 
     async def get_orders(
             self,
             timeout: int = 10
-    ) -> OrdersSchema:
-        data: Dict[str, Any] = {
-            "command": config.api.orders,
-            "active": "true"
-        }
+    ) -> OrdersResponseSchema:
+        data: Dict[str, Any] = OrdersRequestSchema().model_dump()
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 url=self.url,
@@ -55,15 +50,10 @@ class OrderServiceAPI:
             ) as response:
                 if self.is_ok(response=response):
                     orders = await response.json()
-                    return OrdersSchema(**orders['data'])
+                    return OrdersResponseSchema(**orders['data'])
 
     async def get_flyers(self, phone: str) -> Dict:
         pass
 
     async def get_orders_history(self, phone: str) -> Dict:
         pass
-
-
-import asyncio
-
-print(asyncio.run(OrderServiceAPI().get_orders()))
