@@ -14,7 +14,7 @@ start_router = Router()
 async def start(message: Message) -> None:
     # user_id: int = message.from_user.id
     username: str = message.from_user.username
-    text = await load_json(path=config.messages.greeting)
+    text = await load_json(path=config.messages.start)
     await message.answer(
         text=text['start'].format(username=username),
         reply_markup=await start_kb()

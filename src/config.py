@@ -24,7 +24,7 @@ class StorageConfig(BaseSettings):
 
 
 class MessagesConfig(BaseSettings):
-    greeting: Path = BASE_DIR / "src" / "static" / "messages" / "start.json"
+    start: Path = BASE_DIR / "src" / "static" / "messages" / "start.json"
     auth: Path = BASE_DIR / "src" / "static" / "messages" / "auth.json"
 
 

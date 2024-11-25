@@ -2,6 +2,8 @@ import aiohttp
 from typing import Any, Dict
 
 from src.config import config
+from src.api.schemas.order import OrderSchema
+from src.api.schemas.orders import OrdersSchema
 
 
 class OrderServiceAPI:
@@ -21,7 +23,7 @@ class OrderServiceAPI:
             self,
             phone: str,
             timeout: int = 10
-    ) -> Dict:
+    ) -> OrderSchema:
         data: Dict[str, Any] = {
             "command": config.api.order,
             "telefon": phone
@@ -34,12 +36,13 @@ class OrderServiceAPI:
                 timeout=timeout
             ) as response:
                 if self.is_ok(response=response):
-                    return await response.json()
+                    order = await response.json()
+                    return OrderSchema(**order['data']['order'])
 
     async def get_orders(
             self,
             timeout: int = 10
-    ) -> Dict:
+    ) -> OrdersSchema:
         data: Dict[str, Any] = {
             "command": config.api.orders,
             "active": "true"
@@ -52,7 +55,8 @@ class OrderServiceAPI:
                 timeout=timeout
             ) as response:
                 if self.is_ok(response=response):
-                    return await response.json()
+                    orders = await response.json()
+                    return OrdersSchema(**orders['data'])
 
     async def get_flyers(self, phone: str) -> Dict:
         pass
@@ -64,8 +68,3 @@ class OrderServiceAPI:
 import asyncio
 
 print(asyncio.run(OrderServiceAPI().get_orders()))
-from src.utils import format_phone
-phone = format_phone("9526725393")
-print(phone)
-print(asyncio.run(OrderServiceAPI().get_order(phone=phone)))
-print(asyncio.run(OrderServiceAPI().get_order(phone="89526725393")))

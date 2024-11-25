@@ -2,7 +2,7 @@ from aiogram import F, Router
 from aiogram.types import Message
 
 from src.database.services.service import user_service
-from src.order_service.api import OrderServiceAPI
+from src.api.service import OrderServiceAPI
 
 
 status_router = Router()

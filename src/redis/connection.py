@@ -8,7 +8,7 @@ from src.config import config
 T = TypeVar("T")
 
 
-class RedisSession:
+class RedisConnection:
     def __init__(self) -> None:
         self._connection: Optional[aioredis.Redis] = None
 

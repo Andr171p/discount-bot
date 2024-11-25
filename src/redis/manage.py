@@ -2,11 +2,10 @@ from typing import Dict
 
 from src.config import config
 from src.utils import timestamp
-from src.storage.services.session import RedisSession
+from src.redis.connection import RedisConnection
 
 
-class RedisService(RedisSession):
-
+class RedisManager(RedisConnection):
     async def is_exists(self, number: str) -> bool:
         return await self._connection.exists(number)
 
