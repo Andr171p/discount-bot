@@ -2,8 +2,7 @@ import aiohttp
 from typing import Any, Dict
 
 from src.config import config
-from src.api.schemas.order import OrderSchema
-from src.api.schemas.orders import OrdersSchema
+from src.api.schemas.order import OrderSchema, OrdersSchema
 
 
 class OrderServiceAPI:

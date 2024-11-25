@@ -20,3 +20,7 @@ class OrderSchema(BaseModel):
     delivery_method: str
     delivery_adress: str
     phones: List[str]
+
+
+class OrdersSchema(BaseModel):
+    orders: List[OrderSchema]
