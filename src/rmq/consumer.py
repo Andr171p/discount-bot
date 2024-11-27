@@ -15,7 +15,7 @@ async def process_message(message: AbstractIncomingMessage) -> None:
 
 async def consume(
         routing_key: str = config.queue.name
-) -> ...:
+) -> None:
     connection = await aio_pika.connect_robust(
         url=config.rmq.url
     )
