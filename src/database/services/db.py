@@ -18,7 +18,7 @@ class DBSession:
 
     def init(self) -> None:
         self._engine = create_async_engine(
-            url=config.db.url,
+            url=config.postgresql.url,
             echo=True
         )
         self._sessionmaker = async_sessionmaker(

@@ -3,7 +3,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import BigInteger
 from typing import TypeVar
 
-from src.database.models.base import Base
+from src.database.base import Base
 
 
 class AbstractBase(AsyncAttrs, Base):

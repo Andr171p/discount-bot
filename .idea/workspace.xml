@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 1.0.5">
-      <change afterPath="$PROJECT_DIR$/src/redis/models/order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redis/service.py" afterDir="false" />
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 1.0.6">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/schemas/request.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/schemas/response.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redis/connection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redis/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/redis/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/services/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/services/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redis/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redis/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redis/models/order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redis/service.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,24 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.api (1).executor": "Run",
-    "Python.api.executor": "Run",
-    "Python.auth.executor": "Run",
-    "Python.base.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.service.executor": "Run",
-    "Python.statuses.executor": "Run",
-    "Python.storage.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/andre/IS"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.api (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.auth.executor&quot;: &quot;Run&quot;,
+    &quot;Python.base.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.statuses.executor&quot;: &quot;Run&quot;,
+    &quot;Python.storage.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/TyuiuProfile&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusApp\src\database" />
       <recent name="C:\Users\andre\OrderStatusApp\src\storage" />
       <recent name="C:\Users\andre\OrderStatusApp\src" />
       <recent name="C:\Users\andre\OrderStatusApp\src\status_api" />
@@ -264,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732538085804</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[orders-status-app] 1.0.6">
+      <option name="closed" value="true" />
+      <created>1732546072959</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732546072959</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,6 +303,7 @@
     <MESSAGE value="[orders-status-app] 1.0.3" />
     <MESSAGE value="[orders-status-app] 1.0.4" />
     <MESSAGE value="[orders-status-app] 1.0.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 1.0.5" />
+    <MESSAGE value="[orders-status-app] 1.0.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 1.0.6" />
   </component>
 </project>
