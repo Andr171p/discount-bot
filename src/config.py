@@ -23,6 +23,18 @@ class PostgreSQLConfig(BaseSettings):
     url: str = f"postgresql+asyncpg://{user}:{password}@{host}:{port}/railway"
 
 
+class RMQConfig(BaseSettings):
+    user: str = os.getenv("RMQ_USER")
+    password: str = os.getenv("RMQ_PASSWORD")
+    host: str = os.getenv("RMQ_HOST")
+    port: str = os.getenv("RMQ_PORT")
+    url: str = f"amqp://{user}:{password}@{host}:{port}"
+
+
+class QueueConfig(BaseSettings):
+    name: str = "orders"
+
+
 class MessagesConfig(BaseSettings):
     start: Path = BASE_DIR / "src" / "static" / "messages" / "start.json"
     auth: Path = BASE_DIR / "src" / "static" / "messages" / "auth.json"
@@ -37,6 +49,8 @@ class Config(BaseSettings):
     sqlite: SQLiteConfig = SQLiteConfig()
     postgresql: PostgreSQLConfig = PostgreSQLConfig()
     messages: MessagesConfig = MessagesConfig()
+    rmq: RMQConfig = RMQConfig()
+    queue: QueueConfig = QueueConfig()
 
 
 config = Config()
