@@ -1,9 +1,10 @@
-from src.app.bot import Bot
-from src.rmq.consumer import consume
+from src.rmq import consumer
 from src.broadcast.process import process_message
+from src.config import config
 
 
-async def broadcast(bot: Bot) -> None:
-    async with Bot as bot:
-        async def process_message(message):
-            ...
+async def send_order_status() -> None:
+    await consumer.consume(
+        callback=process_message,
+        routing_key=config.queue.name
+    )

@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 28.11.2024 alembic + fix">
-      <change afterPath="$PROJECT_DIR$/src/rmq/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rmq/consumer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 29.11.2024 UserService update">
+      <change afterPath="$PROJECT_DIR$/src/formatter/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/formatter/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/send.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/send.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +287,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732746567303</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[orders-status-app] 28.11.2024 RabbitMQ">
+      <option name="closed" value="true" />
+      <created>1732748429091</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732748429091</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[orders-status-app] 28.11.2024 RabbitMQ">
+      <option name="closed" value="true" />
+      <created>1732748483162</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732748483162</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[orders-status-app] 29.11.2024 UserService update">
+      <option name="closed" value="true" />
+      <created>1732825722195</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732825722195</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,6 +337,8 @@
     <MESSAGE value="[orders-status-app] 1.0.6" />
     <MESSAGE value="[orders-status-app] 28.11.2024 alembic" />
     <MESSAGE value="[orders-status-app] 28.11.2024 alembic + fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 28.11.2024 alembic + fix" />
+    <MESSAGE value="[orders-status-app] 28.11.2024 RabbitMQ" />
+    <MESSAGE value="[orders-status-app] 29.11.2024 UserService update" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 29.11.2024 UserService update" />
   </component>
 </project>
