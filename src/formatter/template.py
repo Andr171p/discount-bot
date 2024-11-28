@@ -1,27 +1,12 @@
-from typing import Any, Dict
+'''from typing import Any, Dict
 
-from src.formatter.statuses import Statuses
 from src.utils import load_json
 from src.config import config
 
 
 async def get_message(order: Dict[str, Any]) -> str:
-    templates = await load_json(path=config.messages.statuses)
-    '''text = templates[order['status']].format(
-        number=order['number'],
-        date=order['date'],
-        amount=order['amount'],
-        pay_status=order['pay_status'],
-        cooking_time_from=order['cooking_time_from'],
-        cooking_time_to=order['cooking_time_to'],
-        delivery_time_from=order['delivery_time_from'],
-        delivery_time_to=order['delivery_time_to'],
-        trade_point=order['trade_point'],
-        trade_point_card=order['trade_point_card'],
-        delivery_adress=order['delivery_adress']
-    )'''
-    text = templates[order['status']].format(**order)
-    print(text)
+    messages = await load_json(path=config.messages.statuses)
+    return messages[order['status']].format(**order)
 
 
 import asyncio
@@ -45,4 +30,4 @@ order = OrderSchema(
     delivery_adress="OOP 82 k1",
     phones=["+7(800)555-35-35"]
 )
-asyncio.run(get_message(order=order.model_dump()))
+asyncio.run(get_message(order=order.model_dump()))'''

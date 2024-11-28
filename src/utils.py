@@ -29,7 +29,7 @@ def format_phone(phone: str) -> str:
 
 
 def validate_phone(phone: str) -> bool:
-    pattern = r'\+\d\(\d{3}\)\d{3}-\d{2}-\d{2}'
+    pattern = r'\+\d$\d{3}$\d{3}-\d{2}-\d{2}'
     return bool(re.fullmatch(
         pattern=pattern,
         string=phone

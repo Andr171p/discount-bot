@@ -37,7 +37,7 @@ async def create_user(callback: CallbackQuery, state: FSMContext) -> None:
     await callback.answer()
     user = await state.get_data()
     await state.clear()
-    _ = await user_service.add_user(user=UserModel(**user.__dict__))
+    _ = await user_service.add_user(user=UserModel(**user['user'].__dict__))
     text = await load_json(path=config.messages.auth)
     await callback.message.answer(
         text=text['success'],

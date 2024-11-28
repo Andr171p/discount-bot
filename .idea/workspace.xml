@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 29.11.2024 UserService update">
-      <change afterPath="$PROJECT_DIR$/src/formatter/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/formatter/message.py" afterDir="false" />
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 29.11.2024 development">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/broadcast/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/send.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/send.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/formatter/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/formatter/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/formatter/template.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/formatter/template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +46,13 @@
     "Python.base.executor": "Run",
     "Python.config.executor": "Run",
     "Python.consumer.executor": "Run",
+    "Python.main.executor": "Run",
     "Python.service.executor": "Run",
+    "Python.statuses (1).executor": "Run",
     "Python.statuses.executor": "Run",
     "Python.storage.executor": "Run",
+    "Python.template.executor": "Run",
+    "Python.user.executor": "Run",
     "Python.utils.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -55,36 +61,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusApp\src\formatter" />
       <recent name="C:\Users\andre\OrderStatusApp\src\database" />
       <recent name="C:\Users\andre\OrderStatusApp\src\storage" />
       <recent name="C:\Users\andre\OrderStatusApp\src" />
       <recent name="C:\Users\andre\OrderStatusApp\src\status_api" />
-      <recent name="C:\Users\andre\OrderStatusApp\src\database\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.consumer">
-    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusApp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/service" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/api.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration name="consumer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
@@ -107,7 +91,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,11 +100,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/api" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/api/service.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -129,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="statuses" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="statuses (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,11 +122,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/statics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/formatter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/statics/statuses.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/formatter/statuses.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,7 +135,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="storage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="template" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,11 +144,33 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/orders_storage/service" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/formatter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/orders_storage/service/storage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/formatter/template.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/schemas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/schemas/user.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.user" />
+        <item itemvalue="Python.template" />
+        <item itemvalue="Python.statuses (1)" />
         <item itemvalue="Python.consumer" />
-        <item itemvalue="Python.service" />
-        <item itemvalue="Python.api" />
-        <item itemvalue="Python.statuses" />
-        <item itemvalue="Python.storage" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +317,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732825722195</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[orders-status-app] 29.11.2024 broadcast service">
+      <option name="closed" value="true" />
+      <created>1732827257461</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732827257461</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[orders-status-app] 29.11.2024 development">
+      <option name="closed" value="true" />
+      <created>1732831612228</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732831612228</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -339,6 +361,8 @@
     <MESSAGE value="[orders-status-app] 28.11.2024 alembic + fix" />
     <MESSAGE value="[orders-status-app] 28.11.2024 RabbitMQ" />
     <MESSAGE value="[orders-status-app] 29.11.2024 UserService update" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 29.11.2024 UserService update" />
+    <MESSAGE value="[orders-status-app] 29.11.2024 broadcast service" />
+    <MESSAGE value="[orders-status-app] 29.11.2024 development" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 29.11.2024 development" />
   </component>
 </project>
