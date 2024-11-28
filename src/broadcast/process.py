@@ -3,7 +3,7 @@ from typing import List
 from aio_pika.abc import AbstractIncomingMessage
 
 from src.app.bot import bot
-from src.broadcast.models.message import OrderSchema
+from src.broadcast.models.order import OrderSchema
 from src.database.services.service import user_service
 from src.formatter.message import get_order_text
 

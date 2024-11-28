@@ -36,8 +36,9 @@ class QueueConfig(BaseSettings):
 
 
 class MessagesConfig(BaseSettings):
-    start: Path = BASE_DIR / "src" / "static" / "messages" / "start.json"
-    auth: Path = BASE_DIR / "src" / "static" / "messages" / "auth.json"
+    start: Path = BASE_DIR / "src" / "app" / "statics" / "messages" / "start.json"
+    auth: Path = BASE_DIR / "src" / "app" / "statics" / "messages" / "auth.json"
+    statuses: Path = BASE_DIR / "src" / "app" / "statics" / "messages" / "statuses.json"
 
 
 class TelegramConfig(BaseSettings):

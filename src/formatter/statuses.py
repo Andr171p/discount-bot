@@ -12,3 +12,8 @@ class Statuses(Enum):
     delivered = "Доставлен"
     finished = "Завершен"
     canceled = "Отменен"
+
+
+s = "{name} sosat {age}"
+
+print(s.format(age="biba", name=17, item="kkk"))
