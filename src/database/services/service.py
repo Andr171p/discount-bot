@@ -1,5 +1,6 @@
 from sqlalchemy import select
-from typing import Sequence
+from typing import Any, Sequence
+from functools import singledispatchmethod
 
 from src.database.services.db import DBSession
 from src.database.models.user import UserModel
@@ -39,10 +40,23 @@ class UserService(DBSession):
                 await session.commit()
             return user.scalars().one()
 
-    async def get_user(self, user_id: int) -> UserModel | None:
+    @singledispatchmethod
+    async def get_user(self, arg: Any) -> UserModel:
+        raise NotImplementedError("<UserService> `get_user` method not implement...")
+
+    @get_user.register
+    async def _(self, user_id: int) -> UserModel:
         async with self.session() as session:
             user = await session.execute(
                 select(UserModel).where(UserModel.user_id == user_id)
+            )
+            return user.scalars().one()
+
+    @get_user.register
+    async def _(self, phone: str) -> UserModel:
+        async with self.session() as session:
+            user = await session.execute(
+                select(UserModel).where(UserModel.phone == phone)
             )
             return user.scalars().one()
 

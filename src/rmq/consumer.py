@@ -1,19 +1,11 @@
+import asyncio
 import aio_pika
-from aio_pika.abc import AbstractIncomingMessage
 
 from src.config import config
 
-import asyncio
-
-
-async def process_message(message: AbstractIncomingMessage) -> None:
-    async with message.process():
-        # logging message ...
-        print(f"[x] Received [{message.body.decode()}]")
-        await message.ack()
-
 
 async def consume(
+        callback: callable,
         routing_key: str = config.queue.name
 ) -> None:
     connection = await aio_pika.connect_robust(
@@ -22,9 +14,5 @@ async def consume(
     async with connection:
         channel = await connection.channel()
         queue = await channel.declare_queue(name=routing_key)
-        await queue.consume(process_message)
+        await queue.consume(callback)
         await asyncio.Future()
-
-
-if __name__ == "__main__":
-    asyncio.run(consume(routing_key=config.queue.name))
