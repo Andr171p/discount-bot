@@ -29,7 +29,6 @@ async def get_order_status(message: Message) -> None:
     else:
         text: Dict[str, str] = await load_json(path=config.messages.auth)
         await message.answer(
-            text=text['empty'],
-            reply_markup=...
+            text=text['empty']
         )
         await message.answer(text=text['later'])
