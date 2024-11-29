@@ -16,7 +16,7 @@ status_router = Router()
 @status_router.message(F.text == "Статус заказа")
 async def get_order_status(message: Message) -> None:
     user_id: int = message.from_user.id
-    user = await user_service.get_user(user_id=user_id)
+    user = await user_service.get_user(user_id)
     phone: str = user.phone
     orders: Dict[str, Any] = await api.get_user_orders(phone=phone)
     if len(orders['data']['orders']) != 0:
