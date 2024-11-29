@@ -19,7 +19,7 @@ async def start(message: Message) -> None:
     if await user_service.get_user(user_id) is not None:
         text = await load_json(path=config.messages.start)
         await message.answer(
-            text=text['already'],
+            text=text['already_auth'],
             reply_markup=await order_status_kb()
         )
     text = await load_json(path=config.messages.start)
