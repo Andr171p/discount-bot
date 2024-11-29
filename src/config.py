@@ -1,4 +1,5 @@
 import os
+from typing import Dict
 from pathlib import Path
 from dotenv import load_dotenv
 from pydantic_settings import BaseSettings
@@ -31,6 +32,11 @@ class RMQConfig(BaseSettings):
     url: str = f"amqp://{user}:{password}@{host}:{port}"
 
 
+class APIServiceConfig(BaseSettings):
+    url: str = os.getenv("API_URL")
+    headers: Dict[str, str] = {"Content-Type": "application/json; charset=UTF-8"}
+
+
 class QueueConfig(BaseSettings):
     name: str = "orders"
 
@@ -52,6 +58,7 @@ class Config(BaseSettings):
     messages: MessagesConfig = MessagesConfig()
     rmq: RMQConfig = RMQConfig()
     queue: QueueConfig = QueueConfig()
+    api: APIServiceConfig = APIServiceConfig()
 
 
 config = Config()
