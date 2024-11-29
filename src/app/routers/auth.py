@@ -7,6 +7,7 @@ from src.utils import load_json, format_phone
 from src.app.keyboards import auth, status
 from src.app.schemas.user import UserSchema
 from src.app.states.contact import ContactForm
+from src.app.logger import logger
 from src.database.models.user import UserModel
 from src.database.services.service import user_service
 
@@ -24,6 +25,7 @@ async def get_user_contact(message: Message, state: FSMContext) -> None:
         username=username,
         phone=format_phone(phone)
     )
+    logger.info(f"user: {user} shared contact")
     await state.update_data(user=user)
     text = await load_json(path=config.messages.auth)
     await message.answer(
