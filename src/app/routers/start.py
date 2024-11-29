@@ -22,8 +22,9 @@ async def start(message: Message) -> None:
             text=text['already_auth'],
             reply_markup=await order_status_kb()
         )
-    text = await load_json(path=config.messages.start)
-    await message.answer(
-        text=text['start'].format(username=username),
-        reply_markup=await start_kb()
-    )
+    else:
+        text = await load_json(path=config.messages.start)
+        await message.answer(
+            text=text['start'].format(username=username),
+            reply_markup=await start_kb()
+        )
