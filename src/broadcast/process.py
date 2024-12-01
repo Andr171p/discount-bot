@@ -23,11 +23,17 @@ async def process_message(message: AbstractIncomingMessage) -> None:
                 user_id: int = user.user_id
             text: str = await get_message(order=order.model_dump())
             try:
-                await bot.send_message(
-                    chat_id=user_id,
-                    text=text,
-                    reply_markup=await pay_link_kb(url=order.pay_link)
-                )
+                if order.pay_status != "CONFIRMED":
+                    await bot.send_message(
+                        chat_id=user_id,
+                        text=text,
+                        reply_markup=await pay_link_kb(url=order.pay_link)
+                    )
+                else:
+                    await bot.send_message(
+                        chat_id=user_id,
+                        text=text
+                    )
                 logger.info(f"message sent to user_id=[{user_id}] successfully")
             except Exception as _ex:
                 logger.warning(_ex)
