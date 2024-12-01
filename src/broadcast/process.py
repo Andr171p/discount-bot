@@ -2,6 +2,7 @@ from typing import List
 from aio_pika.abc import AbstractIncomingMessage
 
 from src.app.bot import bot
+from src.app.keyboards.status import pay_link_kb
 from src.broadcast.models.order import OrderSchema
 from src.broadcast.logger import logger
 from src.database.services.service import user_service
@@ -22,7 +23,8 @@ async def process_message(message: AbstractIncomingMessage) -> None:
             try:
                 await bot.send_message(
                     chat_id=user_id,
-                    text=text
+                    text=text,
+                    reply_markup=await pay_link_kb(url=order.pay_link)
                 )
                 logger.info(f"message sent to user_id=[{user_id}] successfully")
             except Exception as _ex:
