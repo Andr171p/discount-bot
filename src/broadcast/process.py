@@ -7,6 +7,7 @@ from src.broadcast.models.order import OrderSchema
 from src.broadcast.logger import logger
 from src.database.services.service import user_service
 from src.formatter.message import get_message
+from src.utils import format_phone
 
 
 async def process_message(message: AbstractIncomingMessage) -> None:
@@ -16,6 +17,7 @@ async def process_message(message: AbstractIncomingMessage) -> None:
         order = OrderSchema.parse_raw(data)
         phones: List[str] = order.phones
         for phone in phones:
+            phone = format_phone(phone=phone)
             user = await user_service.get_user(phone)
             if user is not None:
                 user_id: int = user.user_id

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 30.11.2024 status api">
-      <change beforePath="$PROJECT_DIR$/src/app/routers/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/status.py" afterDir="false" />
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 01.12.2024 pay_link">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/process.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
     "Python.utils.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/andre/TyuiuProfile"
+    "last_opened_file_path": "C:/Users/andre/HeadHunterParser"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -390,7 +391,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732913615372</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[orders-status-app] 30.11.2024 status api fix">
+      <option name="closed" value="true" />
+      <created>1732914469897</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732914469897</updated>
+    </task>
+    <task id="LOCAL-00026" summary="[orders-status-app] 30.11.2024 status api fix+">
+      <option name="closed" value="true" />
+      <created>1732914641150</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1732914641150</updated>
+    </task>
+    <task id="LOCAL-00027" summary="[orders-status-app] 01.12.2024 pay_link">
+      <option name="closed" value="true" />
+      <created>1733037058094</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733037058095</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -405,7 +430,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="orders-status-app" />
     <MESSAGE value="orders-status-app 1.0" />
     <MESSAGE value="orders-status-app 1.0.0" />
     <MESSAGE value="[orders-status-app] 1.0.1" />
@@ -428,6 +452,9 @@
     <MESSAGE value="[orders-status-app] 29.11.2024 auth fix" />
     <MESSAGE value="[orders-status-app] 29.11.2024 auth fix+" />
     <MESSAGE value="[orders-status-app] 30.11.2024 status api" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 30.11.2024 status api" />
+    <MESSAGE value="[orders-status-app] 30.11.2024 status api fix" />
+    <MESSAGE value="[orders-status-app] 30.11.2024 status api fix+" />
+    <MESSAGE value="[orders-status-app] 01.12.2024 pay_link" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 01.12.2024 pay_link" />
   </component>
 </project>
