@@ -1,5 +1,5 @@
 from pydantic import BaseModel, field_validator
-from typing import List
+from typing import List, Optional
 
 from src import utils
 
@@ -42,4 +42,13 @@ class OrderSchema(BaseModel):
     @classmethod
     def validate_time(cls, v: str) -> str:
         return utils.format_time(v)
+
+    @field_validator("phones")
+    @classmethod
+    def validate_phones(cls, values: List[str]) -> List[str]:
+        phones: Optional[List[str]] = []
+        for phone in values:
+            phone = utils.format_phone(phone)
+            phones.append(phone)
+        return phones
 
