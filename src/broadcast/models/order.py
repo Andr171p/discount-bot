@@ -1,5 +1,7 @@
-from pydantic import BaseModel
-from typing import List, Literal
+from pydantic import BaseModel, field_validator
+from typing import List
+
+from src import utils
 
 
 class OrderSchema(BaseModel):
@@ -20,3 +22,24 @@ class OrderSchema(BaseModel):
     delivery_method: str
     delivery_adress: str
     phones: List[str]
+
+    @field_validator("number")
+    @classmethod
+    def validate_number(cls, v: str) -> str:
+        return utils.format_number(v)
+
+    @field_validator("date")
+    @classmethod
+    def validate_date(cls, v: str) -> str:
+        return utils.format_date(v)
+
+    @field_validator(
+        "cooking_time_from",
+        "cooking_time_to",
+        "delivery_time_from",
+        "delivery_time_to"
+    )
+    @classmethod
+    def validate_time(cls, v: str) -> str:
+        return utils.format_time(v)
+

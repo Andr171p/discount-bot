@@ -32,3 +32,7 @@ async def get_order_status(message: Message) -> None:
             text=text['empty']
         )
         await message.answer(text=text['later'])
+
+
+async def send_order_status(order: Dict[str, Any]) -> None:
+    ...

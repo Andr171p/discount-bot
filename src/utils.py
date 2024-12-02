@@ -1,7 +1,7 @@
 import re
 import json
 import aiofiles
-from typing import Dict
+from typing import Dict, List
 from pathlib import Path
 
 
@@ -34,3 +34,16 @@ def validate_phone(phone: str) -> bool:
         pattern=pattern,
         string=phone
     ))
+
+
+def format_number(number: str) -> str:
+    return number.split(sep='-', maxsplit=1)[-1]
+
+
+def format_time(time: str) -> str:
+    return time.split('T')[-1][:-3]
+
+
+def format_date(date: str) -> str:
+    parts: List[str] = date.split('T')[0].split('-')
+    return '.'.join(reversed(parts))
