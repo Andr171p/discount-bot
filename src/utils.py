@@ -47,3 +47,6 @@ def format_time(time: str) -> str:
 def format_date(date: str) -> str:
     parts: List[str] = date.split('T')[0].split('-')
     return '.'.join(reversed(parts))
+
+
+print(format_time("0001-01-01T15:00:00"))
