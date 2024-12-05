@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 05.12.2024 bug fixing">
-      <change beforePath="$PROJECT_DIR$/src/formatter/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/formatter/message.py" afterDir="false" />
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 05.12.2024 message bug fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -552,7 +554,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733360186015</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="[orders-status-app] 05.12.2024 bug fixing...">
+      <option name="closed" value="true" />
+      <created>1733360269151</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1733360269151</updated>
+    </task>
+    <task id="LOCAL-00046" summary="[orders-status-app] 05.12.2024 message bug fixed">
+      <option name="closed" value="true" />
+      <created>1733360388839</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1733360388839</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -567,8 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 29.11.2024 requirements aio-pika fix" />
-    <MESSAGE value="[orders-status-app] 29.11.2024 logging" />
     <MESSAGE value="[orders-status-app] 29.11.2024 auth fix" />
     <MESSAGE value="[orders-status-app] 29.11.2024 auth fix+" />
     <MESSAGE value="[orders-status-app] 30.11.2024 status api" />
@@ -592,6 +608,8 @@
     <MESSAGE value="[orders-status-app] 05.12.2024 test+logs" />
     <MESSAGE value="[orders-status-app] 05.12.2024 test+logs+" />
     <MESSAGE value="[orders-status-app] 05.12.2024 bug fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 05.12.2024 bug fixing" />
+    <MESSAGE value="[orders-status-app] 05.12.2024 bug fixing..." />
+    <MESSAGE value="[orders-status-app] 05.12.2024 message bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 05.12.2024 message bug fixed" />
   </component>
 </project>
