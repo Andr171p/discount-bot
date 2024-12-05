@@ -52,3 +52,7 @@ class OrderSchema(BaseModel):
             phones.append(phone)
         return phones
 
+    @field_validator("delivery_adress")
+    @classmethod
+    def validate_adress(cls, value: str) -> str:
+        return utils.format_address(value)

@@ -49,4 +49,6 @@ def format_date(date: str) -> str:
     return '.'.join(reversed(parts))
 
 
-print(format_time("0001-01-01T15:00:00"))
+def format_address(address: str) -> str:
+    parts: List[str] = address.split(',')[3:]
+    return ''.join(parts)
