@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 05.12.2024 test++">
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 05.12.2024 test+logs">
       <change beforePath="$PROJECT_DIR$/src/broadcast/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/process.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -520,7 +520,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733359367233</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="[orders-status-app] 05.12.2024 test+++">
+      <option name="closed" value="true" />
+      <created>1733359619261</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1733359619261</updated>
+    </task>
+    <task id="LOCAL-00042" summary="[orders-status-app] 05.12.2024 test+logs">
+      <option name="closed" value="true" />
+      <created>1733359786021</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1733359786021</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -535,8 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 29.11.2024 development" />
-    <MESSAGE value="[orders-status-app] 29.11.2024 version: 0.0.0" />
     <MESSAGE value="[orders-status-app] 29.11.2024 deployment" />
     <MESSAGE value="[orders-status-app] 29.11.2024 requirements fix" />
     <MESSAGE value="[orders-status-app] 29.11.2024 requirements aio-pika fix" />
@@ -560,6 +574,8 @@
     <MESSAGE value="[orders-status-app] 05.12.2024 test" />
     <MESSAGE value="[orders-status-app] 05.12.2024 test+" />
     <MESSAGE value="[orders-status-app] 05.12.2024 test++" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 05.12.2024 test++" />
+    <MESSAGE value="[orders-status-app] 05.12.2024 test+++" />
+    <MESSAGE value="[orders-status-app] 05.12.2024 test+logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 05.12.2024 test+logs" />
   </component>
 </project>
