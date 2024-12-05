@@ -21,7 +21,7 @@ async def process_message(message: AbstractIncomingMessage) -> None:
             if user is not None:
                 user_id: int = user.user_id
             print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-            print(order.model_dump())
+            logger.info(order.model_dump())
             print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
             text: str = await get_message(order=order.model_dump())
             logger.info(text)
