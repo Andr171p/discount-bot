@@ -20,11 +20,7 @@ async def process_message(message: AbstractIncomingMessage) -> None:
             user = await user_service.get_user(phone)
             if user is not None:
                 user_id: int = user.user_id
-            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-            logger.info(order.model_dump())
-            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
             text: str = await get_message(order=order.model_dump())
-            logger.info(text)
             try:
                 if order.pay_status != "CONFIRMED":
                     await bot.send_message(
