@@ -22,7 +22,7 @@ async def process_message(message: AbstractIncomingMessage) -> None:
             if user is not None:
                 user_id: int = user.user_id
             text: str = await get_message(order=order.model_dump())
-            print(text)
+            logger.info(text)
             try:
                 if order.pay_status != "CONFIRMED":
                     await bot.send_message(
