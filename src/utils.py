@@ -41,7 +41,7 @@ def format_number(number: str) -> str:
 
 
 def format_time(time: str) -> str:
-    return time.split('T')[-1][:-3]
+    return str(time.split('T')[-1][:-3])
 
 
 def format_date(date: str) -> str:
