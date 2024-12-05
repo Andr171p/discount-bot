@@ -14,15 +14,15 @@ async def process_message(message: AbstractIncomingMessage) -> None:
         data: str = message.body.decode()
         logger.info(f"[x] Received: [{data}]")
         order = OrderSchema.parse_raw(data)
-        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print(type(order.delivery_adress))
-        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         phones: List[str] = order.phones
         for phone in phones:
             # phone = format_phone(phone=phone)
             user = await user_service.get_user(phone)
             if user is not None:
                 user_id: int = user.user_id
+            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+            print(order.model_dump())
+            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
             text: str = await get_message(order=order.model_dump())
             logger.info(text)
             try:
