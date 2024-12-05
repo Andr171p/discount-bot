@@ -29,7 +29,7 @@ async def process_message(message: AbstractIncomingMessage) -> None:
                 if order.pay_status != "CONFIRMED":
                     await bot.send_message(
                         chat_id=user_id,
-                        text=text,
+                        text=str(order.model_dump()),
                         reply_markup=await pay_link_kb(url=order.pay_link)
                     )
                 else:
