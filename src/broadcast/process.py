@@ -14,6 +14,7 @@ async def process_message(message: AbstractIncomingMessage) -> None:
         data: str = message.body.decode()
         logger.info(f"[x] Received: [{data}]")
         order = OrderSchema.parse_raw(data)
+        print(order)
         phones: List[str] = order.phones
         for phone in phones:
             # phone = format_phone(phone=phone)
@@ -21,6 +22,7 @@ async def process_message(message: AbstractIncomingMessage) -> None:
             if user is not None:
                 user_id: int = user.user_id
             text: str = await get_message(order=order.model_dump())
+            print(text)
             try:
                 if order.pay_status != "CONFIRMED":
                     await bot.send_message(
