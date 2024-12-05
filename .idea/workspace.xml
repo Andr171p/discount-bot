@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 05.12.2024 new domain fix">
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 05.12.2024 add address formating+">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/schemas/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/schemas/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -466,7 +464,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733355674020</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="[orders-status-app] 05.12.2024 add address formating">
+      <option name="closed" value="true" />
+      <created>1733356858143</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733356858143</updated>
+    </task>
+    <task id="LOCAL-00035" summary="[orders-status-app] 05.12.2024 add address formating+">
+      <option name="closed" value="true" />
+      <created>1733357051552</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1733357051552</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -481,8 +495,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 1.0.5" />
-    <MESSAGE value="[orders-status-app] 1.0.6" />
     <MESSAGE value="[orders-status-app] 28.11.2024 alembic" />
     <MESSAGE value="[orders-status-app] 28.11.2024 alembic + fix" />
     <MESSAGE value="[orders-status-app] 28.11.2024 RabbitMQ" />
@@ -506,6 +518,8 @@
     <MESSAGE value="[orders-status-app] 03.12.2024 update message + api logs" />
     <MESSAGE value="[orders-status-app] 04.12.2024 new domain" />
     <MESSAGE value="[orders-status-app] 05.12.2024 new domain fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 05.12.2024 new domain fix" />
+    <MESSAGE value="[orders-status-app] 05.12.2024 add address formating" />
+    <MESSAGE value="[orders-status-app] 05.12.2024 add address formating+" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 05.12.2024 add address formating+" />
   </component>
 </project>
