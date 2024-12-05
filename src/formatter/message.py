@@ -9,4 +9,4 @@ async def get_message(order: Dict[str, Any]) -> str:
     # order = OrderSchema(**order)
     messages = await utils.load_json(path=config.messages.statuses)
     # return messages[order.status].format(**order.__dict__)
-    return messages[order['status']].format(order)
+    return messages[order['status']].format(**order)
