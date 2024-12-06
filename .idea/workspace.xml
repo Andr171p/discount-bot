@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 07.12.2024 auth update + message class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/process.py" afterDir="false" />
-    </list>
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 07.12.2024 fix status message" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,22 +199,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732311771768</updated>
-    </task>
-    <task id="LOCAL-00003" summary="orders-status-app 1.0.0">
-      <option name="closed" value="true" />
-      <created>1732403331177</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1732403331177</updated>
-    </task>
-    <task id="LOCAL-00004" summary="[orders-status-app] 1.0.1">
-      <option name="closed" value="true" />
-      <created>1732443393710</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1732443393710</updated>
     </task>
     <task id="LOCAL-00005" summary="[orders-status-app] 1.0.2">
       <option name="closed" value="true" />
@@ -595,7 +576,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733520540395</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="[orders-status-app] 07.12.2024 consumer fix">
+      <option name="closed" value="true" />
+      <created>1733521348647</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1733521348647</updated>
+    </task>
+    <task id="LOCAL-00053" summary="[orders-status-app] 07.12.2024 fix status message">
+      <option name="closed" value="true" />
+      <created>1733521633297</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1733521633297</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -610,8 +607,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 01.12.2024 pay_link" />
-    <MESSAGE value="[orders-status-app] 01.12.2024 fix-phone-formatting" />
     <MESSAGE value="[orders-status-app] 01.12.2024 new status messages" />
     <MESSAGE value="[orders-status-app] 03.12.2024 formating messages" />
     <MESSAGE value="[orders-status-app] 03.12.2024 update message + api logs" />
@@ -635,6 +630,8 @@
     <MESSAGE value="[orders-status-app] 06.12.2024 new message v1" />
     <MESSAGE value="[orders-status-app] 06.12.2024 update info logs" />
     <MESSAGE value="[orders-status-app] 07.12.2024 auth update + message class" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 07.12.2024 auth update + message class" />
+    <MESSAGE value="[orders-status-app] 07.12.2024 consumer fix" />
+    <MESSAGE value="[orders-status-app] 07.12.2024 fix status message" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 07.12.2024 fix status message" />
   </component>
 </project>

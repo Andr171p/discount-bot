@@ -21,10 +21,11 @@ class OrderStatus:
     async def _get_text(self) -> str:
         templates: Dict[str, Any] = await utils.load_json(path=config.messages.statuses)
         if self.order.delivery_method == "Принят оператором":
-            text: str = templates[self.order.status][self.order.delivery_method].format(**self.order.model_dump())
-            return text
-        text: str = templates[self.order.status].format(**self.order.model_dump())
-        return text
+            text: str = templates[self.order.status][self.order.delivery_method]
+            print(text)
+            return text.format(**self.order.model_dump())
+        text: str = templates[self.order.status]
+        return text.format(**self.order.model_dump())
 
     async def get_bot_message(self, user_id: int) -> BotMessage:
         bot_message = BotMessage(
