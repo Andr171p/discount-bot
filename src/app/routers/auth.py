@@ -3,7 +3,7 @@ from aiogram.types import Message
 
 from src.config import config
 from src.utils import load_json, format_phone
-from src.app.keyboards import auth, order_status
+from src.app.keyboards import order_status
 from src.app.schemas.user import UserSchema
 from src.app.logger import logger
 from src.database.models.user import UserModel
