@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 06.12.2024 update info logs">
-      <change afterPath="$PROJECT_DIR$/src/message/order_status.py" afterDir="false" />
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 07.12.2024 auth update + message class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/keyboards/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/keyboards/order_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/schemas/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/send.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/send.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/formatter/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/formatter/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/message.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/formatter/statuses.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/statuses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/process.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,14 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732311771768</updated>
-    </task>
-    <task id="LOCAL-00002" summary="orders-status-app 1.0">
-      <option name="closed" value="true" />
-      <created>1732353839278</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1732353839278</updated>
     </task>
     <task id="LOCAL-00003" summary="orders-status-app 1.0.0">
       <option name="closed" value="true" />
@@ -607,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733491686094</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="[orders-status-app] 07.12.2024 auth update + message class">
+      <option name="closed" value="true" />
+      <created>1733520540395</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1733520540395</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -622,7 +610,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 30.11.2024 status api fix+" />
     <MESSAGE value="[orders-status-app] 01.12.2024 pay_link" />
     <MESSAGE value="[orders-status-app] 01.12.2024 fix-phone-formatting" />
     <MESSAGE value="[orders-status-app] 01.12.2024 new status messages" />
@@ -647,6 +634,7 @@
     <MESSAGE value="[orders-status-app] 06.12.2024" />
     <MESSAGE value="[orders-status-app] 06.12.2024 new message v1" />
     <MESSAGE value="[orders-status-app] 06.12.2024 update info logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 06.12.2024 update info logs" />
+    <MESSAGE value="[orders-status-app] 07.12.2024 auth update + message class" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 07.12.2024 auth update + message class" />
   </component>
 </project>

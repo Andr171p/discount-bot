@@ -26,5 +26,5 @@ async def process_message(message: AbstractIncomingMessage) -> None:
             except Exception as _ex:
                 logger.warning(_ex)
                 logger.warning(f"message was not sent")
-            finally:
-                await message.ack()
+            # finally:
+                # await message.ack()
