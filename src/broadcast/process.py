@@ -1,12 +1,10 @@
 from typing import List
 from aio_pika.abc import AbstractIncomingMessage
 
-from src.app.bot import bot
-from src.app.keyboards.status import pay_link_kb
 from src.app.schemas.order import OrderSchema
 from src.broadcast.logger import logger
 from src.database.services.service import user_service
-from src.formatter.message import get_message
+from src.broadcast.send import send_order_status
 
 
 async def process_message(message: AbstractIncomingMessage) -> None:
@@ -16,23 +14,14 @@ async def process_message(message: AbstractIncomingMessage) -> None:
         order = OrderSchema.parse_raw(data)
         phones: List[str] = order.phones
         for phone in phones:
-            # phone = format_phone(phone=phone)
             user = await user_service.get_user(phone)
             if user is not None:
                 user_id: int = user.user_id
-            text: str = await get_message(order=order.model_dump())
             try:
-                if order.pay_status != "CONFIRMED":
-                    await bot.send_message(
-                        chat_id=user_id,
-                        text=text,
-                        reply_markup=await pay_link_kb(url=order.pay_link)
-                    )
-                else:
-                    await bot.send_message(
-                        chat_id=user_id,
-                        text=text
-                    )
+                await send_order_status(
+                    user_id=user_id,
+                    order=order
+                )
                 logger.info(f"message sent to user_id=[{user_id}] successfully")
             except Exception as _ex:
                 logger.warning(_ex)
