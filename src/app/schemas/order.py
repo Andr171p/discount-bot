@@ -77,4 +77,5 @@ class OrderSchema(BaseModel):
   "delivery_adress": "625001, Тюменская обл, г.о. город Тюмень, г Тюмень, ул Полевая, д. 117, к. 2, кв. 145, подъезд 1, этаж 1",
   "phones": ["9829764729"]
 }
-print(OrderSchema(**o))'''
+order = OrderSchema(**o)'''
+
