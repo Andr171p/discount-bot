@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 06.12.2024">
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 06.12.2024 update info logs">
+      <change afterPath="$PROJECT_DIR$/src/message/order_status.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/keyboards/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/keyboards/order_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/schemas/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/broadcast/send.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/send.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/formatter/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/formatter/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/formatter/statuses.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/statuses.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +54,7 @@
     "Python.consumer.executor": "Run",
     "Python.main.executor": "Run",
     "Python.order.executor": "Run",
+    "Python.order_status_message.executor": "Run",
     "Python.process.executor": "Run",
     "Python.send.executor": "Run",
     "Python.service.executor": "Run",
@@ -65,7 +78,7 @@
       <recent name="C:\Users\andre\OrderStatusApp\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.send">
+  <component name="RunManager" selected="Python.order_status_message">
     <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
@@ -110,6 +123,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="order_status_message" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/formatter" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/formatter/order_status_message.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="send" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
@@ -124,28 +159,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/broadcast/send.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="template" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusApp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/formatter" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/formatter/template.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.order_status_message" />
         <item itemvalue="Python.send" />
         <item itemvalue="Python.api" />
         <item itemvalue="Python.order" />
         <item itemvalue="Python.utils" />
-        <item itemvalue="Python.template" />
       </list>
     </recent_temporary>
   </component>
@@ -201,14 +214,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732311771768</updated>
-    </task>
-    <task id="LOCAL-00001" summary="orders-status-app">
-      <option name="closed" value="true" />
-      <created>1732316109580</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1732316109580</updated>
     </task>
     <task id="LOCAL-00002" summary="orders-status-app 1.0">
       <option name="closed" value="true" />
@@ -586,7 +591,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733490025379</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="[orders-status-app] 06.12.2024 new message v1">
+      <option name="closed" value="true" />
+      <created>1733490693646</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1733490693646</updated>
+    </task>
+    <task id="LOCAL-00050" summary="[orders-status-app] 06.12.2024 update info logs">
+      <option name="closed" value="true" />
+      <created>1733491686091</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1733491686094</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -601,8 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 30.11.2024 status api" />
-    <MESSAGE value="[orders-status-app] 30.11.2024 status api fix" />
     <MESSAGE value="[orders-status-app] 30.11.2024 status api fix+" />
     <MESSAGE value="[orders-status-app] 01.12.2024 pay_link" />
     <MESSAGE value="[orders-status-app] 01.12.2024 fix-phone-formatting" />
@@ -626,6 +645,8 @@
     <MESSAGE value="[orders-status-app] 05.12.2024 message bug fixed" />
     <MESSAGE value="[orders-status-app] 05.12.2024 new message style + pay_link" />
     <MESSAGE value="[orders-status-app] 06.12.2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 06.12.2024" />
+    <MESSAGE value="[orders-status-app] 06.12.2024 new message v1" />
+    <MESSAGE value="[orders-status-app] 06.12.2024 update info logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 06.12.2024 update info logs" />
   </component>
 </project>

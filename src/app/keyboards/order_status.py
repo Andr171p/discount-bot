@@ -24,3 +24,11 @@ async def pay_link_kb(url: str) -> InlineKeyboardMarkup:
     ]
     keyboard = InlineKeyboardMarkup(inline_keyboard=keyboard_list)
     return keyboard
+
+
+async def confirmed_link_kb(url: str) -> InlineKeyboardMarkup:
+    keyboard_list: List[List[InlineKeyboardButton]] = [
+        [InlineKeyboardButton(text="ОПЛАЧЕН", url=url)]
+    ]
+    keyboard = InlineKeyboardMarkup(inline_keyboard=keyboard_list)
+    return keyboard

@@ -6,7 +6,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 from src.app.routers.start import start_router
 from src.app.routers.auth import auth_router
-from src.app.routers.status import status_router
+from src.app.routers.order_status import status_router
 from src.config import config
 
 

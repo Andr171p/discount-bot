@@ -23,7 +23,7 @@ ModelType = TypeVar(
 
 class UserModel(AbstractBase):
     user_id: Mapped[int] = mapped_column(BigInteger)
-    username: Mapped[str]
+    username: Mapped[str] = mapped_column(nullable=True)
     phone: Mapped[str]
 
     def __repr__(self) -> str:

@@ -5,7 +5,7 @@ from aiogram.filters import Command
 from src.config import config
 from src.utils import load_json
 from src.app.keyboards.start import start_kb
-from src.app.keyboards.status import order_status_kb
+from src.app.keyboards.order_status import order_status_kb
 from src.database.services.service import user_service
 
 
