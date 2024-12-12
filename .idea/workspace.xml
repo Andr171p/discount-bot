@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 07.12.2024 new auth + fix">
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 08.12.2024">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order_status.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,32 +32,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.api (1).executor": "Run",
-    "Python.api.executor": "Run",
-    "Python.auth.executor": "Run",
-    "Python.base.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.consumer.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.order.executor": "Run",
-    "Python.order_status.executor": "Run",
-    "Python.order_status_message.executor": "Run",
-    "Python.process.executor": "Run",
-    "Python.send.executor": "Run",
-    "Python.service.executor": "Run",
-    "Python.statuses (1).executor": "Run",
-    "Python.statuses.executor": "Run",
-    "Python.storage.executor": "Run",
-    "Python.template.executor": "Run",
-    "Python.user.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/andre/HeadHunterParser"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.api (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.auth.executor&quot;: &quot;Run&quot;,
+    &quot;Python.base.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.consumer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.order.executor&quot;: &quot;Run&quot;,
+    &quot;Python.order_status.executor&quot;: &quot;Run&quot;,
+    &quot;Python.order_status_message.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process.executor&quot;: &quot;Run&quot;,
+    &quot;Python.send.executor&quot;: &quot;Run&quot;,
+    &quot;Python.service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.statuses (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.statuses.executor&quot;: &quot;Run&quot;,
+    &quot;Python.storage.executor&quot;: &quot;Run&quot;,
+    &quot;Python.template.executor&quot;: &quot;Run&quot;,
+    &quot;Python.user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/HeadHunterParser&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\andre\OrderStatusApp\src\app\schemas" />
@@ -202,14 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732311771768</updated>
-    </task>
-    <task id="LOCAL-00009" summary="[orders-status-app] 1.0.6">
-      <option name="closed" value="true" />
-      <created>1732546072959</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1732546072959</updated>
     </task>
     <task id="LOCAL-00010" summary="[orders-status-app] 28.11.2024 alembic">
       <option name="closed" value="true" />
@@ -595,7 +588,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733522821116</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="[orders-status-app] 08.12.2024">
+      <option name="closed" value="true" />
+      <created>1733607130770</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1733607130770</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -610,7 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 05.12.2024 new domain fix" />
     <MESSAGE value="[orders-status-app] 05.12.2024 add address formating" />
     <MESSAGE value="[orders-status-app] 05.12.2024 add address formating+" />
     <MESSAGE value="[orders-status-app] 05.12.2024 add address formating+test" />
@@ -635,6 +635,7 @@
     <MESSAGE value="[orders-status-app] 07.12.2024 fix order message" />
     <MESSAGE value="[orders-status-app] 07.12.2024 new auth" />
     <MESSAGE value="[orders-status-app] 07.12.2024 new auth + fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 07.12.2024 new auth + fix" />
+    <MESSAGE value="[orders-status-app] 08.12.2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 08.12.2024" />
   </component>
 </project>

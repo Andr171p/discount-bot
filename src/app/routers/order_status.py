@@ -23,12 +23,13 @@ async def get_order_status(message: Message) -> None:
     orders: List[Dict[str, Any]] = response['data']['orders']
     if len(orders) != 0:
         for order in orders:
-            order_status = OrderStatus(order=OrderSchema(**order))
-            bot_message = await order_status.get_bot_message(user_id=user_id)
-            await message.answer(
-                text=bot_message.text,
-                reply_markup=bot_message.keyboard
-            )
+            if order['project'] == "Дисконт Суши":
+                order_status = OrderStatus(order=OrderSchema(**order))
+                bot_message = await order_status.get_bot_message(user_id=user_id)
+                await message.answer(
+                    text=bot_message.text,
+                    reply_markup=bot_message.keyboard
+                )
     else:
         template: Dict[str, str] = await load_json(path=config.messages.auth)
         await message.answer(
