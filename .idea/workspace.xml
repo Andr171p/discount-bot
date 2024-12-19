@@ -4,33 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 18.12.2024 check project">
-      <change afterPath="$PROJECT_DIR$/src/rabbit_mq/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rabbit_mq/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rabbit_mq/exc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rabbit_mq/exchange.py" afterDir="false" />
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 20.12.2024 production">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/states/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/states/contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/broadcast.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/broadcast.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/logger.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/process.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/services/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/services/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/message/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rmq/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders_api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rmq/consumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/consumer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders_api/service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/logger.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +69,7 @@
       <recent name="C:\Users\andre\OrderStatusApp\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.broadcast">
+  <component name="RunManager" selected="Python.config">
     <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
@@ -137,6 +114,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/config.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="consumer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
@@ -151,28 +150,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rabbit_mq/consumer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="order_status" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusApp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/message" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/message/order_status.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.config" />
         <item itemvalue="Python.broadcast" />
         <item itemvalue="Python.consumer" />
         <item itemvalue="Python.api" />
         <item itemvalue="Python.service" />
-        <item itemvalue="Python.order_status" />
       </list>
     </recent_temporary>
   </component>
@@ -228,22 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732311771768</updated>
-    </task>
-    <task id="LOCAL-00012" summary="[orders-status-app] 28.11.2024 RabbitMQ">
-      <option name="closed" value="true" />
-      <created>1732748429091</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1732748429091</updated>
-    </task>
-    <task id="LOCAL-00013" summary="[orders-status-app] 28.11.2024 RabbitMQ">
-      <option name="closed" value="true" />
-      <created>1732748483162</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1732748483162</updated>
     </task>
     <task id="LOCAL-00014" summary="[orders-status-app] 29.11.2024 UserService update">
       <option name="closed" value="true" />
@@ -621,7 +582,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734536336180</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="[orders-status-app] 20.12.2024 rabbit fanout update">
+      <option name="closed" value="true" />
+      <created>1734644861860</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1734644861861</updated>
+    </task>
+    <task id="LOCAL-00062" summary="[orders-status-app] 20.12.2024 production">
+      <option name="closed" value="true" />
+      <created>1734645825530</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1734645825530</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -636,8 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 05.12.2024 add address formating+test" />
-    <MESSAGE value="[orders-status-app] 05.12.2024 add address formating+test+" />
     <MESSAGE value="[orders-status-app] 05.12.2024 test" />
     <MESSAGE value="[orders-status-app] 05.12.2024 test+" />
     <MESSAGE value="[orders-status-app] 05.12.2024 test++" />
@@ -661,6 +636,8 @@
     <MESSAGE value="[orders-status-app] 08.12.2024" />
     <MESSAGE value="[orders-status-app] 12.12.2024" />
     <MESSAGE value="[orders-status-app] 18.12.2024 check project" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 18.12.2024 check project" />
+    <MESSAGE value="[orders-status-app] 20.12.2024 rabbit fanout update" />
+    <MESSAGE value="[orders-status-app] 20.12.2024 production" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 20.12.2024 production" />
   </component>
 </project>
