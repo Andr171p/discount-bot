@@ -1,7 +1,7 @@
 from aiogram import F, Router
 from aiogram.types import Message
 
-from src.config import config
+from src.config import settings
 from src.utils import load_json, format_phone
 from src.app.keyboards import order_status
 from src.app.schemas.user import UserSchema
@@ -25,7 +25,7 @@ async def register_user(message: Message) -> None:
     )
     logger.info(f"user: {user} shared contact")
     _ = await user_service.add_user(user=UserModel(**user.__dict__))
-    text = await load_json(path=config.messages.auth)
+    text = await load_json(path=settings.messages.auth)
     await message.answer(
         text=text['success'],
         reply_markup=await order_status.order_status_kb()

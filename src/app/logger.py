@@ -7,5 +7,5 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(
-    name="app-service"
+    name="app-orders_api"
 )

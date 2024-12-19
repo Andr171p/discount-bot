@@ -5,7 +5,7 @@ from aiogram.types import InlineKeyboardMarkup
 from src.app.schemas.order import OrderSchema
 from src.app.keyboards import order_status
 from src.message.message import BotMessage
-from src.config import config
+from src.config import settings
 from src import utils
 
 
@@ -19,7 +19,7 @@ class OrderStatus:
         return await order_status.confirmed_link_kb(url=self.order.pay_link)
 
     async def _get_text(self) -> str:
-        templates: Dict[str, Any] = await utils.load_json(path=config.messages.statuses)
+        templates: Dict[str, Any] = await utils.load_json(path=settings.messages.statuses)
         if self.order.status == "Принят оператором":
             text: str = templates[self.order.status][self.order.delivery_method]
             return text.format(**self.order.model_dump())

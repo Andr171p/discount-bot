@@ -4,9 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 12.12.2024">
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 18.12.2024 check project">
+      <change afterPath="$PROJECT_DIR$/src/rabbit_mq/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rabbit_mq/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rabbit_mq/exc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rabbit_mq/exchange.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/states/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/states/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/broadcast.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/broadcast.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/logger.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/broadcast/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/services/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/services/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rmq/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders_api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rmq/consumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/consumer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/orders_api/service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/logger.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,32 +56,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.api (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.auth.executor&quot;: &quot;Run&quot;,
-    &quot;Python.base.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.consumer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.order.executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status.executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_status_message.executor&quot;: &quot;Run&quot;,
-    &quot;Python.process.executor&quot;: &quot;Run&quot;,
-    &quot;Python.send.executor&quot;: &quot;Run&quot;,
-    &quot;Python.service.executor&quot;: &quot;Run&quot;,
-    &quot;Python.statuses (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.statuses.executor&quot;: &quot;Run&quot;,
-    &quot;Python.storage.executor&quot;: &quot;Run&quot;,
-    &quot;Python.template.executor&quot;: &quot;Run&quot;,
-    &quot;Python.user.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/HeadHunterParser&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.api (1).executor": "Run",
+    "Python.api.executor": "Run",
+    "Python.auth.executor": "Run",
+    "Python.base.executor": "Run",
+    "Python.broadcast.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.consumer.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.order.executor": "Run",
+    "Python.order_status.executor": "Run",
+    "Python.order_status_message.executor": "Run",
+    "Python.process.executor": "Run",
+    "Python.send.executor": "Run",
+    "Python.service.executor": "Run",
+    "Python.statuses (1).executor": "Run",
+    "Python.statuses.executor": "Run",
+    "Python.storage.executor": "Run",
+    "Python.template.executor": "Run",
+    "Python.user.executor": "Run",
+    "Python.utils.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/andre/HeadHunterParser"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\andre\OrderStatusApp\src\app\schemas" />
@@ -67,8 +92,8 @@
       <recent name="C:\Users\andre\OrderStatusApp\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.service">
-    <configuration name="order" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.broadcast">
+    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,11 +102,55 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/schemas" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/service" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/schemas/order.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/service/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="broadcast" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/broadcast" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/broadcast/broadcast.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="consumer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/rabbit_mq" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rabbit_mq/consumer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,50 +173,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/message/order_status.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="order_status_message" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusApp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/formatter" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/formatter/order_status_message.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="send" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusApp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/broadcast" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/broadcast/send.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.broadcast" />
+        <item itemvalue="Python.consumer" />
+        <item itemvalue="Python.api" />
         <item itemvalue="Python.service" />
         <item itemvalue="Python.order_status" />
-        <item itemvalue="Python.order" />
-        <item itemvalue="Python.order_status_message" />
-        <item itemvalue="Python.send" />
       </list>
     </recent_temporary>
   </component>
@@ -203,14 +228,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732311771768</updated>
-    </task>
-    <task id="LOCAL-00011" summary="[orders-status-app] 28.11.2024 alembic + fix">
-      <option name="closed" value="true" />
-      <created>1732746567303</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1732746567303</updated>
     </task>
     <task id="LOCAL-00012" summary="[orders-status-app] 28.11.2024 RabbitMQ">
       <option name="closed" value="true" />
@@ -596,7 +613,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734004626949</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="[orders-status-app] 18.12.2024 check project">
+      <option name="closed" value="true" />
+      <created>1734536336180</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1734536336180</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -611,7 +636,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 05.12.2024 add address formating+" />
     <MESSAGE value="[orders-status-app] 05.12.2024 add address formating+test" />
     <MESSAGE value="[orders-status-app] 05.12.2024 add address formating+test+" />
     <MESSAGE value="[orders-status-app] 05.12.2024 test" />
@@ -636,6 +660,7 @@
     <MESSAGE value="[orders-status-app] 07.12.2024 new auth + fix" />
     <MESSAGE value="[orders-status-app] 08.12.2024" />
     <MESSAGE value="[orders-status-app] 12.12.2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 12.12.2024" />
+    <MESSAGE value="[orders-status-app] 18.12.2024 check project" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 18.12.2024 check project" />
   </component>
 </project>

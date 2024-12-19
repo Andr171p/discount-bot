@@ -6,9 +6,9 @@ from typing import Any, Dict, List
 from src.app.schemas.order import OrderSchema
 from src.message.order_status import OrderStatus
 from src.database.services.service import user_service
-from src.service import api
+from src.orders_api import service as api
 from src.utils import load_json
-from src.config import config
+from src.config import settings
 
 
 status_router = Router()
@@ -31,7 +31,7 @@ async def get_order_status(message: Message) -> None:
                     reply_markup=bot_message.keyboard
                 )
     else:
-        template: Dict[str, str] = await load_json(path=config.messages.auth)
+        template: Dict[str, str] = await load_json(path=settings.messages.auth)
         await message.answer(
             text=template['empty']
         )

@@ -1,13 +1,13 @@
 import asyncio
 
-from src.app.bot import run_aiogram_bot
-from src.broadcast.broadcast import run_rmq_broadcast
+from src.app.bot import start_aiogram_bot
+from src.broadcast.broadcast import start_rabbit_broadcast
 
 
 async def main() -> None:
     await asyncio.gather(
-        run_aiogram_bot(),
-        run_rmq_broadcast()
+        start_aiogram_bot(),
+        start_rabbit_broadcast()
     )
 
 

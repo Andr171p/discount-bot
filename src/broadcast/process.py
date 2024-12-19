@@ -1,10 +1,14 @@
+import logging
 from typing import List, Dict
+
 from aio_pika.abc import AbstractIncomingMessage
 
 from src.app.schemas.order import OrderSchema
-from src.broadcast.logger import logger
 from src.database.services.service import user_service
 from src.broadcast.send import send_order_status
+
+
+log = logging.getLogger(__name__)
 
 
 async def process_message(message: AbstractIncomingMessage) -> None:
@@ -12,7 +16,7 @@ async def process_message(message: AbstractIncomingMessage) -> None:
         data: str = message.body.decode()
         headers: Dict[str, str] = message.headers
         if headers['project'] == "Дисконт Суши":
-            logger.info(f"[x] Received: [{data}]")
+            log.info(f"[x] Received: [{data}]")
             order = OrderSchema.parse_raw(data)
             phones: List[str] = order.phones
             for phone in phones:
@@ -24,9 +28,9 @@ async def process_message(message: AbstractIncomingMessage) -> None:
                         user_id=user_id,
                         order=order
                     )
-                    logger.info(f"message sent to user_id=[{user_id}] successfully")
+                    log.info(f"message sent to user_id=[{user_id}] successfully")
                 except Exception as _ex:
-                    logger.warning(_ex)
-                    logger.warning(f"message was not sent")
+                    log.warning(_ex)
+                    log.warning(f"message was not sent")
                 # finally:
                 # await message.ack()

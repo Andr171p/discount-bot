@@ -7,5 +7,5 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(
-    name="database-service"
+    name="database-orders_api"
 )

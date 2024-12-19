@@ -8,7 +8,7 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine
 )
 
-from src.config import config
+from src.config import settings
 
 
 class DBSession:
@@ -18,7 +18,7 @@ class DBSession:
 
     def init(self) -> None:
         self._engine = create_async_engine(
-            url=config.postgresql.url,
+            url=settings.pg.url,
             echo=True
         )
         self._sessionmaker = async_sessionmaker(
