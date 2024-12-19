@@ -31,7 +31,7 @@ async def get_order_status(message: Message) -> None:
                     reply_markup=bot_message.keyboard
                 )
     else:
-        template: Dict[str, str] = await load_json(path=settings.messages.auth)
+        template: Dict[str, str] = await load_json(path=settings.msg.auth)
         await message.answer(
             text=template['empty']
         )

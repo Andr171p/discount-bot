@@ -25,7 +25,7 @@ async def register_user(message: Message) -> None:
     )
     logger.info(f"user: {user} shared contact")
     _ = await user_service.add_user(user=UserModel(**user.__dict__))
-    text = await load_json(path=settings.messages.auth)
+    text = await load_json(path=settings.msg.auth)
     await message.answer(
         text=text['success'],
         reply_markup=await order_status.order_status_kb()
