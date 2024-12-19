@@ -18,12 +18,12 @@ class RabbitConsumer(RabbitClient):
             queue_name: str = "",
             prefetch_count: int = 1
     ) -> None:
-        await self._channel.set_qos(prefetch_count=prefetch_count)
-        queue = await self.declare_bind_queue(
-            queue_name=queue_name,
-            exclusive=not queue_name
-        )
-        async with RabbitClient():
+        async with self._connection:
+            await self._channel.set_qos(prefetch_count=prefetch_count)
+            queue = await self.declare_bind_queue(
+                queue_name=queue_name,
+                exclusive=not queue_name
+            )
             log.info("Start consuming message")
             await queue.consume(message_callback)
             await asyncio.Future()
