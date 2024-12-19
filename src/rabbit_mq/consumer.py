@@ -23,6 +23,7 @@ class RabbitConsumer(RabbitClient):
             queue_name=queue_name,
             exclusive=not queue_name
         )
-        log.info("Start consuming message")
-        await queue.consume(message_callback)
-        await asyncio.Future()
+        async with RabbitClient():
+            log.info("Start consuming message")
+            await queue.consume(message_callback)
+            await asyncio.Future()
