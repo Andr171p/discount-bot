@@ -42,6 +42,7 @@ class RabbitBase:
     async def __aenter__(self) -> "RabbitBase":
         await self.connect()
         self._channel = await self.channel()
+        print("++++++++++++++++++++++++++++++++++++++=")
         return self
 
     async def __aexit__(self, exc_type, exc_val, exc_tb) -> None:
