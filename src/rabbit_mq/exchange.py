@@ -32,5 +32,7 @@ class RabbitExchange:
             name=queue_name,
             exclusive=exclusive
         )
-        await queue.bind(settings.rabbit.queue_name)
+        await queue.bind(
+            exchange=settings.rabbit.queue_name
+        )
         return queue

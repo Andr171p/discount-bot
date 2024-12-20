@@ -19,7 +19,7 @@ class OrderStatus:
         return await order_status.confirmed_link_kb(url=self.order.pay_link)
 
     async def _get_text(self) -> str:
-        templates: Dict[str, Any] = await utils.load_json(path=settings.messages.statuses)
+        templates: Dict[str, Any] = await utils.load_json(path=settings.msg.statuses)
         if self.order.status == "Принят оператором":
             text: str = templates[self.order.status][self.order.delivery_method]
             return text.format(**self.order.model_dump())

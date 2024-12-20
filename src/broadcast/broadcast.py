@@ -7,7 +7,7 @@ import asyncio
 
 async def start_rabbit_broadcast() -> None:
     async with RabbitConsumer() as consumer:
-        await consumer.connect()
-        await consumer.channel()
-        await consumer.consume_massage(process_message)
-        await asyncio.Future()
+        await consumer.consume_massage(
+            message_callback=process_message,
+            queue_name=settings.rabbit.project_queue_name
+        )
