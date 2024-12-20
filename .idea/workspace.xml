@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 20.12.2024 + rabbit">
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 20.12.2024 ...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/consumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/consumer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/broadcast.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/broadcast.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,22 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732311771768</updated>
-    </task>
-    <task id="LOCAL-00017" summary="[orders-status-app] 29.11.2024 version: 0.0.0">
-      <option name="closed" value="true" />
-      <created>1732835663906</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1732835663906</updated>
-    </task>
-    <task id="LOCAL-00018" summary="[orders-status-app] 29.11.2024 deployment">
-      <option name="closed" value="true" />
-      <created>1732835710682</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1732835710682</updated>
     </task>
     <task id="LOCAL-00019" summary="[orders-status-app] 29.11.2024 requirements fix">
       <option name="closed" value="true" />
@@ -597,7 +581,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734647342398</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="[orders-status-app] 20.12.2024 + rabbit +">
+      <option name="closed" value="true" />
+      <created>1734647645657</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1734647645657</updated>
+    </task>
+    <task id="LOCAL-00067" summary="[orders-status-app] 20.12.2024 ...">
+      <option name="closed" value="true" />
+      <created>1734661741410</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1734661741411</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -612,8 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 05.12.2024 test+++" />
-    <MESSAGE value="[orders-status-app] 05.12.2024 test+logs" />
     <MESSAGE value="[orders-status-app] 05.12.2024 test+logs+" />
     <MESSAGE value="[orders-status-app] 05.12.2024 bug fixing" />
     <MESSAGE value="[orders-status-app] 05.12.2024 bug fixing..." />
@@ -637,6 +635,8 @@
     <MESSAGE value="[orders-status-app] 20.12.2024 fix connection" />
     <MESSAGE value="[orders-status-app] 20.12.2024 fix message bug" />
     <MESSAGE value="[orders-status-app] 20.12.2024 + rabbit" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 20.12.2024 + rabbit" />
+    <MESSAGE value="[orders-status-app] 20.12.2024 + rabbit +" />
+    <MESSAGE value="[orders-status-app] 20.12.2024 ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 20.12.2024 ..." />
   </component>
 </project>
