@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 20.12.2024 ...">
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 20.12.2024 production v1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/broadcast/broadcast.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/broadcast/broadcast.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rabbit_mq/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <recent name="C:\Users\andre\OrderStatusApp\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.config">
+  <component name="RunManager" selected="Python.main">
     <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
@@ -157,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,11 +166,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database/services" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/services/service.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.consumer" />
         <item itemvalue="Python.config" />
         <item itemvalue="Python.broadcast" />
-        <item itemvalue="Python.consumer" />
         <item itemvalue="Python.api" />
-        <item itemvalue="Python.service" />
       </list>
     </recent_temporary>
   </component>
@@ -204,22 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732311771768</updated>
-    </task>
-    <task id="LOCAL-00019" summary="[orders-status-app] 29.11.2024 requirements fix">
-      <option name="closed" value="true" />
-      <created>1732835943686</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1732835943686</updated>
-    </task>
-    <task id="LOCAL-00020" summary="[orders-status-app] 29.11.2024 requirements aio-pika fix">
-      <option name="closed" value="true" />
-      <created>1732836040626</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1732836040626</updated>
     </task>
     <task id="LOCAL-00021" summary="[orders-status-app] 29.11.2024 logging">
       <option name="closed" value="true" />
@@ -597,7 +581,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734661741411</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="[orders-status-app] 20.12.2024 [+]">
+      <option name="closed" value="true" />
+      <created>1734662109483</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1734662109483</updated>
+    </task>
+    <task id="LOCAL-00069" summary="[orders-status-app] 20.12.2024 production v1">
+      <option name="closed" value="true" />
+      <created>1734665615581</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1734665615581</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -612,8 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 05.12.2024 test+logs+" />
-    <MESSAGE value="[orders-status-app] 05.12.2024 bug fixing" />
     <MESSAGE value="[orders-status-app] 05.12.2024 bug fixing..." />
     <MESSAGE value="[orders-status-app] 05.12.2024 message bug fixed" />
     <MESSAGE value="[orders-status-app] 05.12.2024 new message style + pay_link" />
@@ -637,6 +635,8 @@
     <MESSAGE value="[orders-status-app] 20.12.2024 + rabbit" />
     <MESSAGE value="[orders-status-app] 20.12.2024 + rabbit +" />
     <MESSAGE value="[orders-status-app] 20.12.2024 ..." />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 20.12.2024 ..." />
+    <MESSAGE value="[orders-status-app] 20.12.2024 [+]" />
+    <MESSAGE value="[orders-status-app] 20.12.2024 production v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 20.12.2024 production v1" />
   </component>
 </project>
