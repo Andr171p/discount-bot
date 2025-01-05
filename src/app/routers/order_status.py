@@ -1,7 +1,8 @@
-from aiogram import F, Router
-from aiogram.types import Message
 from typing import Any, Dict, List
 
+from aiogram import F, Router
+from aiogram.types import Message
+from aiogram.filters import Command
 
 from src.app.schemas.order import OrderSchema
 from src.message.order_status import OrderStatus
@@ -14,7 +15,7 @@ from src.config import settings
 status_router = Router()
 
 
-@status_router.message(F.text == "Статус заказа")
+@status_router.message(Command("orders"))
 async def get_order_status(message: Message) -> None:
     user_id: int = message.from_user.id
     user = await user_service.get_user(user_id)

@@ -31,3 +31,7 @@ async def get_user_orders(phone: str) -> Dict[str, Any]:
                     return await response.json()
     except aiohttp.client_exceptions.ClientConnectorError as _ex:
         log.critical(_ex)
+
+
+import asyncio
+print(asyncio.run(get_user_orders("+7(919)935-09-14")))
