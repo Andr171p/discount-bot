@@ -28,5 +28,5 @@ async def register_user(message: Message) -> None:
     text = await load_json(path=settings.msg.auth)
     await message.answer(
         text=text['success'],
-        reply_markup=await order_status.order_status_kb()
+        # reply_markup=await order_status.order_status_kb()
     )
