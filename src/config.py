@@ -21,7 +21,7 @@ class PostgresSettings(BaseSettings):
     password: str = os.getenv("DB_PASSWORD")
     host: str = os.getenv("DB_HOST")
     port: int = os.getenv("DB_PORT")
-    url: str = f"postgresql+asyncpg://{user}:{password}@{host}:{port}/railway"
+    url: str = f"postgresql+asyncpg://{user}:{password}@{host}:{port}/discount"
 
 
 class RabbitSettings(BaseSettings):
