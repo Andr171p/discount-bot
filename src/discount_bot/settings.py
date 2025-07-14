@@ -22,12 +22,13 @@ class PostgresSettings(BaseSettings):
     user: str = "postgres"
     password: str = "password"
     db: str = "discount"
+    driver: str = "asyncpg"
 
     model_config = SettingsConfigDict(env_prefix="POSTGRES_")
 
     @property
     def url(self) -> str:
-        return f"postgresql+{...}://{self.user}:{self.password}@{self.host}:{self.port}/{self.db}"
+        return f"postgresql+{self.driver}://{self.user}:{self.password}@{self.host}:{self.port}/{self.db}"
 
 
 class RabbitSettings(BaseSettings):
