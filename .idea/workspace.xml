@@ -4,11 +4,82 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="[orders-status-app] 06.01.2025 commands">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="4365235b-0bba-4977-8eaa-d412ebfd7fb6" name="Changes" comment="11.05.2025 fic db connection params">
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/bot/templates.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/bot/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/broker/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/broker/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/broker/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/database/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/database/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/database/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/database/repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/dependencies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/rest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/schemas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/use_cases.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/discount_bot/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/versions/8a682e923a68_initial_revision.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migration/versions/d8dfaf70fb4c_username_may_contains_null.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/discount_bot/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/commands/menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/keyboards/auth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/keyboards/order_status.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/keyboards/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/order_status.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/discount_bot/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/schemas/order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/schemas/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/states/contact.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/auth.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/start.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/discount_bot/bot/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/broadcast.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/process.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/broadcast/send.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/discount_bot/bot/commads.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/data/users.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/services/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/discount_bot/bot/dispatcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/services/db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/services/service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/discount_bot/bot/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/message.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/order_status.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/statuses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/orders_api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/discount_bot/bot/keyboards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/orders_api/service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/consumer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/exc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rabbit_mq/exchange.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,23 +96,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Andr171p"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Andr171p&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Andr171p/orders-status-app.git",
-    "accountId": "7414caab-e221-4c0c-a921-3f5c2dccf18f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Andr171p/orders-status-app.git&quot;,
+    &quot;accountId&quot;: &quot;7414caab-e221-4c0c-a921-3f5c2dccf18f&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2pDs2Ge6BV1Ypr5nJew1GbS5c7J" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -63,6 +133,7 @@
     "Python.send.executor": "Run",
     "Python.service (1).executor": "Run",
     "Python.service.executor": "Run",
+    "Python.settings.executor": "Run",
     "Python.statuses (1).executor": "Run",
     "Python.statuses.executor": "Run",
     "Python.storage.executor": "Run",
@@ -72,19 +143,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/andre/HeadHunterParser"
+    "last_opened_file_path": "C:/Users/andre/OrderStatusApp"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OrderStatusApp\src\discount_bot\database" />
+      <recent name="C:\Users\andre\OrderStatusApp\src\discount_bot\base" />
       <recent name="C:\Users\andre\OrderStatusApp\src\app\schemas" />
       <recent name="C:\Users\andre\OrderStatusApp\src\formatter" />
       <recent name="C:\Users\andre\OrderStatusApp\src\database" />
-      <recent name="C:\Users\andre\OrderStatusApp\src\storage" />
-      <recent name="C:\Users\andre\OrderStatusApp\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.settings">
     <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OrderStatusApp" />
       <option name="ENV_FILES" value="" />
@@ -99,28 +170,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/config.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="consumer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="OrderStatusApp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/rabbit_mq" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rabbit_mq/consumer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,20 +244,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OrderStatusApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/discount_bot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/discount_bot/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.settings" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.config" />
         <item itemvalue="Python.service (1)" />
         <item itemvalue="Python.service" />
-        <item itemvalue="Python.consumer" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
+        <option value="bundled-python-sdk-dfff61a61320-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.159" />
       </set>
     </attachedChunks>
   </component>
@@ -220,22 +291,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732311771768</updated>
-    </task>
-    <task id="LOCAL-00024" summary="[orders-status-app] 30.11.2024 status api">
-      <option name="closed" value="true" />
-      <created>1732913615372</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1732913615372</updated>
-    </task>
-    <task id="LOCAL-00025" summary="[orders-status-app] 30.11.2024 status api fix">
-      <option name="closed" value="true" />
-      <created>1732914469897</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1732914469897</updated>
     </task>
     <task id="LOCAL-00026" summary="[orders-status-app] 30.11.2024 status api fix+">
       <option name="closed" value="true" />
@@ -613,7 +668,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736108497261</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="11.05.2025 ready to production">
+      <option name="closed" value="true" />
+      <created>1746905119115</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1746905119115</updated>
+    </task>
+    <task id="LOCAL-00074" summary="11.05.2025 fic db connection params">
+      <option name="closed" value="true" />
+      <created>1746905396815</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1746905396815</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -628,8 +699,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[orders-status-app] 06.12.2024" />
-    <MESSAGE value="[orders-status-app] 06.12.2024 new message v1" />
     <MESSAGE value="[orders-status-app] 06.12.2024 update info logs" />
     <MESSAGE value="[orders-status-app] 07.12.2024 auth update + message class" />
     <MESSAGE value="[orders-status-app] 07.12.2024 consumer fix" />
@@ -653,6 +722,8 @@
     <MESSAGE value="[orders-status-app] 20.12.2024 production v1 1.0" />
     <MESSAGE value="[orders-status-app] 06.01.2025" />
     <MESSAGE value="[orders-status-app] 06.01.2025 commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="[orders-status-app] 06.01.2025 commands" />
+    <MESSAGE value="11.05.2025 ready to production" />
+    <MESSAGE value="11.05.2025 fic db connection params" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.05.2025 fic db connection params" />
   </component>
 </project>
