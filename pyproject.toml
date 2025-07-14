@@ -21,6 +21,7 @@ aio-pika = "^9.5.0"
 psycopg2 = "^2.9.10"
 faststream = {extras = ["rabbit"], version = "^0.5.47"}
 dishka = "^1.6.0"
+pytest = "^8.4.1"
 
 
 [build-system]

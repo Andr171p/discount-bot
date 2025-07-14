@@ -1,0 +1,61 @@
+name: Build and Deploy Python aiogram Bot
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build Docker image
+      run: |
+        docker build -t aiogram-bot:latest .
+
+    - name: Save Docker image
+      run: |
+        docker save -o aiogram-bot.tar aiogram-bot:latest
+
+    # Шаг 5: Деплой на сервер через SSH
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        username: ${{ secrets.SERVER_USER }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        script: |
+          echo "Stopping existing containers..."
+          cd telegram-bots/discount-bot
+          docker-compose down || true
+          
+          echo "Copying new files..."
+          git pull origin main
+          
+          echo "Loading new Docker image..."
+          docker load -i aiogram-bot.tar
+          
+          echo "Starting containers..."
+          docker-compose up -d
+          
+          echo "Cleaning up..."
+          docker image prune -f
+          rm -f aiogram-bot.tar
+      env:
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+
+        POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+        POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+        POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+
+        RABBIT_USER: ${{ secrets.RABBIT_USER }}
+        RABBIT_PASSWORD: ${{ secrets.RABBIT_PASSWORD }}
+        RABBIT_HOST: ${{secrets.RABBIT_HOST }}
+
+        API_URL: ${{ secrets.API_URL }}

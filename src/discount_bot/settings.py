@@ -17,7 +17,7 @@ class BotSettings(BaseSettings):
 
 
 class PostgresSettings(BaseSettings):
-    host: str = "localhost"
+    host: str = "postgres"
     port: int = 5432
     user: str = "postgres"
     password: str = "password"
