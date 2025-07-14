@@ -19,7 +19,7 @@ class SQLUserRepository(UserRepository):
         try:
             stmt = (
                 insert(UserOrm)
-                .values(**user.model_dump())
+                .values(**user.model_dump(exclude_none=True))
                 .returning(UserOrm)
             )
             result = await self.session.execute(stmt)
