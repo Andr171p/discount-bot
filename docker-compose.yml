@@ -24,16 +24,5 @@ services:
       postgres:
         condition: service_healthy
 
-  migrations:
-    build: .
-    command: sh -c "alembic revision --autogenerate -m 'initial' && alembic upgrade head"
-    restart: on-failure
-    volumes:
-      - .:/app
-    depends_on:
-      postgres:
-        condition: service_healthy
-
-
 volumes:
   postgres_data:
