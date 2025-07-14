@@ -2,11 +2,6 @@ FROM python:3.11-slim as builder
 
 WORKDIR /app
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    postgresql-client \
-    && rm -rf /var/lib/apt/lists/*
-
 RUN pip install --no-cache-dir uv && \
     uv venv -p python3.11 /opt/venv
 
@@ -25,6 +20,7 @@ COPY --from=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 ENV PYTHONUNBUFFERED=1
 
+RUN apt-get update && apt-get install -y postgresql-client
 COPY scripts/entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 ENTRYPOINT ["/app/entrypoint.sh"]
