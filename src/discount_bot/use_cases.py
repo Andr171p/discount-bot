@@ -3,6 +3,7 @@ from .base import ClientService, CrudRepository
 
 
 class RegistrationUseCase:
+    """Регистрация пользователя."""
     def __init__(self, user_repository: CrudRepository[User]) -> None:
         self._user_repository = user_repository
 
@@ -14,6 +15,7 @@ class RegistrationUseCase:
 
 
 class ReceivingOrdersUseCase:
+    """Получение заказов пользователя."""
     def __init__(
             self,
             client_service: ClientService,
