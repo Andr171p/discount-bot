@@ -2,7 +2,7 @@ import re
 
 
 def format_phone(phone: str) -> str:
-    """Приводит номер телефона к формату +7(XXX)XXX-XX-XX"""
+    """Приводит номер телефона к формату +7(XXX)XXX-XX-XX."""
     digits = re.sub(pattern="\D", repl="", string=phone)
     if len(digits) == 11 and digits.startswith("8"):
         digits = "7" + digits[1:]
@@ -12,4 +12,5 @@ def format_phone(phone: str) -> str:
 
 
 def parse_order_number(number: str) -> str:
+    """Получает номер заказа в удобном формате."""
     return number.split(sep="-", maxsplit=1)[-1]
