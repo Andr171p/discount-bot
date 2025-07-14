@@ -11,7 +11,7 @@ from .utils import Order2MessageConverter
 
 from ..schemas import User
 from ..use_cases import RegistrationUseCase, ReceivingOrdersUseCase
-from ..base import CrudRepository
+from ..base import UserRepository
 from ..exceptions import ServiceError, CreationError
 
 logger = logging.getLogger(__name__)
@@ -20,7 +20,7 @@ router = Router()
 
 
 @router.message(CommandStart())
-async def start(message: Message, user_repository: Depends[CrudRepository[User]]) -> None:
+async def start(message: Message, user_repository: Depends[UserRepository]) -> None:
     existing_user = await user_repository.read(message.from_user.id)
     if not existing_user:
         await message.answer(f"""Здравствуйте, {message.from_user.first_name}! Вам нужно пройти регистрацию.

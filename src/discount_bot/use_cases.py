@@ -1,10 +1,10 @@
 from .schemas import User, Order
-from .base import ClientService, CrudRepository
+from .base import ClientService, UserRepository
 
 
 class RegistrationUseCase:
     """Регистрация пользователя."""
-    def __init__(self, user_repository: CrudRepository[User]) -> None:
+    def __init__(self, user_repository: UserRepository) -> None:
         self._user_repository = user_repository
 
     async def execute(self, user: User) -> None:
@@ -19,7 +19,7 @@ class ReceivingOrdersUseCase:
     def __init__(
             self,
             client_service: ClientService,
-            user_repository: CrudRepository[User]
+            user_repository: UserRepository
     ) -> None:
         self._client_service = client_service
         self._user_repository = user_repository
