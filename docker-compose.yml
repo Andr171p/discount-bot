@@ -18,7 +18,7 @@ services:
   bot:
     image: aiogram-bot:latest
     restart: unless-stopped
-    entrypoint: /scripts/entrypoint.sh
+    entrypoint: ./scripts/entrypoint.sh
     volumes:
       - .:/discount_bot
     depends_on:
