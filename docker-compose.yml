@@ -19,7 +19,7 @@ services:
     build: .
     restart: unless-stopped
     volumes:
-      - .:/discount_bot
+      - .:/app
     depends_on:
       postgres:
         condition: service_healthy
@@ -29,7 +29,7 @@ services:
     command: sh -c "alembic revision --autogenerate -m 'initial' && alembic upgrade head"
     restart: on-failure
     volumes:
-      - .:/discount_bot
+      - .:/app
     depends_on:
       postgres:
         condition: service_healthy
