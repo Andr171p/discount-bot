@@ -70,4 +70,4 @@ class AppProvider(Provider):
 
 settings = Settings()
 
-container = make_async_container(AppProvider, context={Settings: settings})
+container = make_async_container(AppProvider(), context={Settings: settings})
