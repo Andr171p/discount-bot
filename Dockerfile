@@ -20,6 +20,8 @@ COPY --from=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 ENV PYTHONUNBUFFERED=1
 
+RUN chmod +x scripts/entrypoint.sh
+
 COPY . .
 
 CMD ["python", "main.py"]
