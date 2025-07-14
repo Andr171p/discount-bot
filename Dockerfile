@@ -22,4 +22,4 @@ ENV PYTHONUNBUFFERED=1
 
 COPY . .
 
-CMD ["python", "main.py"]
+CMD alembic upgrade head && python main.py
