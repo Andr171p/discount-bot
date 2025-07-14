@@ -15,12 +15,9 @@ jobs:
     - name: Set up Docker
       uses: docker/setup-buildx-action@v2
 
-    - name: Build Docker image
+    - name: Build and save Docker image
       run: |
         docker build -t aiogram-bot:latest .
-
-    - name: Save Docker image
-      run: |
         docker save -o aiogram-bot.tar aiogram-bot:latest
 
     - name: Copy Docker image to server
@@ -31,8 +28,6 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
         source: "aiogram-bot.tar"
         target: "telegram-bots/discount-bot/"
-      run: |
-        docker save -o aiogram-bot.tar aiogram-bot:latest
 
     # Шаг 5: Деплой на сервер через SSH
     - name: Deploy to server
