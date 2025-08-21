@@ -42,6 +42,6 @@ class Order2MessageConverter:
 
     def convert(self) -> dict[str, Any]:
         return {
-            "caption": self._to_text(),
+            "text": self._to_text(),
             "reply_markup": self._to_keyboard()
         }
