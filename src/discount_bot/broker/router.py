@@ -8,6 +8,7 @@ from aiogram import Bot
 from ..schemas import Order
 from ..base import UserRepository
 from ..bot.utils import Order2MessageConverter
+from ..utils import format_phone
 
 orders_router = RabbitRouter()
 
@@ -23,7 +24,8 @@ async def send_order(
 ) -> None:
     try:
         for phone in order.phones:
-            user = await user_repository.get_by_phone(phone)
+            formatted_phone = format_phone(phone)
+            user = await user_repository.get_by_phone(formatted_phone)
             converter = Order2MessageConverter(order)
             message_params = converter.convert()
             await bot.send_message(**message_params, chat_id=user.id)
